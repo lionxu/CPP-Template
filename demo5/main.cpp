@@ -2,8 +2,8 @@ void call1();
 void call();
 
 /*
- * ÔÚÁ´½Ó½×¶Î,±àÒëÆ÷½«Ëæ»úÑ¡ÔñÒ»¸öÄ¿±êÎÄ¼þµÄ¾²Ì¬³ÉÔ±±äÁ¿,
- * ÈÃthe_class<int>ÀàÀ´¹²ÏíÕâ¸ö¾²Ì¬³ÉÔ±±äÁ¿.
+ * åœ¨é“¾æŽ¥é˜¶æ®µ,ç¼–è¯‘å™¨å°†éšæœºé€‰æ‹©ä¸€ä¸ªç›®æ ‡æ–‡ä»¶çš„é™æ€æˆå‘˜å˜é‡,
+ * è®©the_class<int>ç±»æ¥å…±äº«è¿™ä¸ªé™æ€æˆå‘˜å˜é‡.
  */
 int main() {
 	call1();

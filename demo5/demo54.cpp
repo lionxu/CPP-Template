@@ -1,5 +1,5 @@
 /*
- * ����ͨ��������Ҳ���Զ����Ա����ģ��
+ * 在普通类中我们也可以定义成员函数模板
  */
 
 struct normal_class {
@@ -16,10 +16,10 @@ T normal_class::get() {
 }
 
 /*
- * ��ģ�����ж����Ա����ģ��
- * ���ҳ�Ա����ģ��������Լ���ģ���β�
- * ��Ա������ģ���ββ��ܺ����ģ���β�������ͬ,��������������ͻ
- * ����ͬ�ĳ�Ա����ģ���������ͬ��ģ���β�,��Ϊ��Ա������ģ���β�ֻ�ں������ڲ��ɼ�
+ * 在模板类中定义成员函数模板
+ * 而且成员函数模板可以有自己的模板形参
+ * 成员函数的模板形参不能和类的模板形参名称相同,否则会造成命名冲突
+ * 而不同的成员函数模板可以有相同的模板形参,因为成员函数的模板形参只在函数体内部可见
  */
 template<typename T0>
 struct a_class_template {
@@ -32,7 +32,7 @@ struct a_class_template {
 	T1 get();
 };
 
-// ��ģ��ĳ�Ա����ģ������ģ���ⲿʵ��
+// 类模板的成员函数模板在类模板外部实现
 template<typename T0> template<typename T1>
 T1 a_class_template<T0>::get() {
 	return T1(value);

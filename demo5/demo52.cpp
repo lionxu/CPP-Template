@@ -1,10 +1,10 @@
 #include<string>
 #include<iostream>
 /*
- * hetero_node:ÊÇÒ»¸öÒìÖÊÁ´±íµÄ½ÚµãÀàÄ£°å
- * ¸Ã½ÚµãµÄÖ¸ÏòÏÂÒ»¸ö½ÚµãµÄÖ¸ÕëµÄÀàÐÍÊÇÒ»¸öÄ£°åÐÎ²Î.
- * ÕâÒâÎ¶×Å,ÔÚÁ´±íÖÐÏÂÒ»¸ö½ÚµãµÄÔªËØÀàÐÍ¿ÉÄÜºÍÇ°Ò»¸ö½ÚµãµÄÔªËØÀàÐÍ²»Í¬
- * ÕâÑùÒ»¸öÁ´±íÖÐµÄ½ÚµãµÄÔªËØÀàÐÍÊÇ²»ÏàÍ¬µÄ,ÕâÑùµÄÁ´±í³ÆÎªÒ»¸öÒìÖÊÁ´±í
+ * hetero_node:æ˜¯ä¸€ä¸ªå¼‚è´¨é“¾è¡¨çš„èŠ‚ç‚¹ç±»æ¨¡æ¿
+ * è¯¥èŠ‚ç‚¹çš„æŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„æŒ‡é’ˆçš„ç±»åž‹æ˜¯ä¸€ä¸ªæ¨¡æ¿å½¢å‚.
+ * è¿™æ„å‘³ç€,åœ¨é“¾è¡¨ä¸­ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„å…ƒç´ ç±»åž‹å¯èƒ½å’Œå‰ä¸€ä¸ªèŠ‚ç‚¹çš„å…ƒç´ ç±»åž‹ä¸åŒ
+ * è¿™æ ·ä¸€ä¸ªé“¾è¡¨ä¸­çš„èŠ‚ç‚¹çš„å…ƒç´ ç±»åž‹æ˜¯ä¸ç›¸åŒçš„,è¿™æ ·çš„é“¾è¡¨ç§°ä¸ºä¸€ä¸ªå¼‚è´¨é“¾è¡¨
  */
 
 template<typename T, typename N>
@@ -16,13 +16,13 @@ struct hetero_node{
 
 };
 
-// ÐÂÔöÊý¾ÝµÄÄ£°åº¯Êý
+// æ–°å¢žæ•°æ®çš„æ¨¡æ¿å‡½æ•°
 template<typename T, typename N>
 hetero_node<T, N>* push(T const &v, N *n) {
 	return new hetero_node<T, N>(v, n);
 }
 
-// ´ÓÁ´±íÖÐÉ¾³ýÁ´±íÍ·½ÚµãµÄÊý¾Ý
+// ä»Žé“¾è¡¨ä¸­åˆ é™¤é“¾è¡¨å¤´èŠ‚ç‚¹çš„æ•°æ®
 template<typename T, typename N>
 N *pop(hetero_node<T, N> *head) {
 	N *next = head->next;
@@ -31,29 +31,29 @@ N *pop(hetero_node<T, N> *head) {
 }
 
 /*
- * Ê¹ÓÃÒìÖÊÁ´±í¹¹ÔìÈýÔª×é
+ * ä½¿ç”¨å¼‚è´¨é“¾è¡¨æž„é€ ä¸‰å…ƒç»„
  */
 int main1() {
 	/*
-	 * ÒìÖÊÁ´±íµÄÃ¿¸ö½ÚµãÀàÐÍ¶¼²»ÏàÍ¬,¼´Ê¹Ëù±£´æµÄÊý¾ÝµÄÀàÐÍ¶¼ÊÇÏàÍ¬µÄ
-	 * Æä½ÚµãÀàÐÍÒ²²»ÏàÍ¬
+	 * å¼‚è´¨é“¾è¡¨çš„æ¯ä¸ªèŠ‚ç‚¹ç±»åž‹éƒ½ä¸ç›¸åŒ,å³ä½¿æ‰€ä¿å­˜çš„æ•°æ®çš„ç±»åž‹éƒ½æ˜¯ç›¸åŒçš„
+	 * å…¶èŠ‚ç‚¹ç±»åž‹ä¹Ÿä¸ç›¸åŒ
 	 */
 	typedef hetero_node<int, void> node_0;
 	typedef hetero_node<char, node_0> node_1;
 	typedef hetero_node<std::string, node_1> node_2;
 
-	// Ç¶Ì×µ÷ÓÃpushÄ£°åÒÔ¹¹ÔìÈýÔª×é
+	// åµŒå¥—è°ƒç”¨pushæ¨¡æ¿ä»¥æž„é€ ä¸‰å…ƒç»„
 	/*
-	 * ÔÚµ÷ÓÃº¯ÊýÄ£°åµÄÊ±ºò,¸ù¾ÝÄ£°åº¯ÊýµÄÄ£°å²ÎÊýµÄ×Ô¶¯ÍÆµ¼»úÖÆ,ÎÒÃÇÎÞÐè¸ø³öTºÍNµÄÖµ
+	 * åœ¨è°ƒç”¨å‡½æ•°æ¨¡æ¿çš„æ—¶å€™,æ ¹æ®æ¨¡æ¿å‡½æ•°çš„æ¨¡æ¿å‚æ•°çš„è‡ªåŠ¨æŽ¨å¯¼æœºåˆ¶,æˆ‘ä»¬æ— éœ€ç»™å‡ºTå’ŒNçš„å€¼
 	 */
 	node_2 *p2 = push(std::string("Awesome"), push('a', push(1, (void*)0)));
 
-	// Í¨¹ýnext³ÉÔ±¿ÉÒÔ·ÃÎÊµ½ÈýÔª×éÖÐµÄÈÎÒâ³ÉÔ±
+	// é€šè¿‡nextæˆå‘˜å¯ä»¥è®¿é—®åˆ°ä¸‰å…ƒç»„ä¸­çš„ä»»æ„æˆå‘˜
 	std::cout << p2->value << ", "
 		<< p2->next->value << ", "
 		<< p2->next->next->value << std::endl;
 	return 0;
 
-	// Í¨¹ýÇ¶Ì×µ÷ÓÃpopÄ£°åÔò¿ÉÒÔÕýÈ·ÊÍ·ÅÄÚ´æÏú»ÙÈýÔª×é
+	// é€šè¿‡åµŒå¥—è°ƒç”¨popæ¨¡æ¿åˆ™å¯ä»¥æ­£ç¡®é‡Šæ”¾å†…å­˜é”€æ¯ä¸‰å…ƒç»„
 	pop(pop(pop(p2)));
 }

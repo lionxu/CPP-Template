@@ -1,10 +1,10 @@
 #include<stdexcept>
 
 /*
- * ¶¨ÒåÁËÒ»¸ö°üº¬ÊÇÊ®¸öÔªËØµÄÊý×éÀàÄ£°å,
- * ¸ÃÊý×é¾ßÓÐÔ½½ç¼ì²éµÄ¹¦ÄÜ.
- * ÓÉÓÚ,Êý×éµÄÔªËØÊýÁ¿ÊÇ¹Ì¶¨µÄ,Èç¹ûÎÒÃÇÐèÒª²»Í¬³¤¶ÈµÄ´øÔ½½ç¼ì²é¹¦ÄÜµÄÊý×é,
- * Ôò´ËÊ±,°ÑÊý×é³¤¶È¶¨ÒåÎª³£Á¿ÒÑ¾­ÎÞ·¨Âú×ãÎÒÃÇµÄÐèÇó.
+ * å®šä¹‰äº†ä¸€ä¸ªåŒ…å«æ˜¯åä¸ªå…ƒç´ çš„æ•°ç»„ç±»æ¨¡æ¿,
+ * è¯¥æ•°ç»„å…·æœ‰è¶Šç•Œæ£€æŸ¥çš„åŠŸèƒ½.
+ * ç”±äºŽ,æ•°ç»„çš„å…ƒç´ æ•°é‡æ˜¯å›ºå®šçš„,å¦‚æžœæˆ‘ä»¬éœ€è¦ä¸åŒé•¿åº¦çš„å¸¦è¶Šç•Œæ£€æŸ¥åŠŸèƒ½çš„æ•°ç»„,
+ * åˆ™æ­¤æ—¶,æŠŠæ•°ç»„é•¿åº¦å®šä¹‰ä¸ºå¸¸é‡å·²ç»æ— æ³•æ»¡è¶³æˆ‘ä»¬çš„éœ€æ±‚.
  */
 template<typename T>
 class array{
@@ -13,7 +13,7 @@ class array{
 
 public:
 	T& operator[](unsigned i) throw(std::out_of_range) {
-		// ·ÃÎÊÔªËØÊ±Ê×ÏÈ½øÐÐÔ½½ç¼ì²é
+		// è®¿é—®å…ƒç´ æ—¶é¦–å…ˆè¿›è¡Œè¶Šç•Œæ£€æŸ¥
 		if (i >= size)
 		{
 			throw std::out_of_range("Access out of range");

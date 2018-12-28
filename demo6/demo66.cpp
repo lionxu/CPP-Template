@@ -1,12 +1,12 @@
 #include<iostream>
 
 /*
- * ÔÚÕâÀïÎÒÃÇ°ÑÒ»¸öÄ£°åµ±×öÄ£°åµÄ²ÎÊıÊ¹ÓÃ
- * ÔÚÉùÃ÷ÖĞµÄclass¹Ø¼ü×ÖÊÇ±ØĞëµÄ,ËµÃ÷Ö»ÓĞÀàÄ£°å¿ÉÒÔ×÷ÎªÄ£°åµÄ²ÎÊı
- * ¶øÇÒ²»ÄÜÓÃstructÌæ»»class
+ * åœ¨è¿™é‡Œæˆ‘ä»¬æŠŠä¸€ä¸ªæ¨¡æ¿å½“åšæ¨¡æ¿çš„å‚æ•°ä½¿ç”¨
+ * åœ¨å£°æ˜ä¸­çš„classå…³é”®å­—æ˜¯å¿…é¡»çš„,è¯´æ˜åªæœ‰ç±»æ¨¡æ¿å¯ä»¥ä½œä¸ºæ¨¡æ¿çš„å‚æ•°
+ * è€Œä¸”ä¸èƒ½ç”¨structæ›¿æ¢class
  */
 
-// FuncÊÇÒ»¸öÄ£°åĞÍÄ£°åº¯Êı,°ü×°foreachÒª¶ÔÃ¿¸öÔªËØ½øĞĞµÄ²Ù×÷
+// Funcæ˜¯ä¸€ä¸ªæ¨¡æ¿å‹æ¨¡æ¿å‡½æ•°,åŒ…è£…foreachè¦å¯¹æ¯ä¸ªå…ƒç´ è¿›è¡Œçš„æ“ä½œ
 template<template<typename TT> class Func, typename T>
 void foreach(T array[], unsigned size) {
 	Func<T> func;
@@ -16,7 +16,7 @@ void foreach(T array[], unsigned size) {
 	}
 }
 
-// ÈıÖÖ²Ù×÷¶¼°ü×°³Éº¯ÊıÀàÄ£°å,¿ÉÒÔÍ¨¹ıÀ¨ºÅ²Ù×÷·ûµ÷ÓÃ
+// ä¸‰ç§æ“ä½œéƒ½åŒ…è£…æˆå‡½æ•°ç±»æ¨¡æ¿,å¯ä»¥é€šè¿‡æ‹¬å·æ“ä½œç¬¦è°ƒç”¨
 template<typename T>
 struct inc {
 	void operator()(T &v) const { ++v; }
@@ -35,7 +35,7 @@ struct print {
 int main1() {
 	int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-	// foreach»á×Ô¶¯Éú³Éprintº¯ÊıÄ£°åÀàµÄÊµÀı
+	// foreachä¼šè‡ªåŠ¨ç”Ÿæˆprintå‡½æ•°æ¨¡æ¿ç±»çš„å®ä¾‹
 	foreach<print>(array, 9);
 	std::cout << std::endl;
 

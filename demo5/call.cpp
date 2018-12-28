@@ -2,8 +2,8 @@
 #include"the_class.h"
 
 /*
-* ¶¨ÒåÁËÀàÄ£°åÊµÀýthe_class<int>
-* ±àÒëÆ÷ÔÚ±àÒëµÄÄ¿±ê´úÂëÎÄ¼þ,Îª¾²Ì¬³ÉÔ±±äÁ¿the_class<int>::id·ÖÅäÄÚ´æµØÖ·¿Õ¼ä
+* å®šä¹‰äº†ç±»æ¨¡æ¿å®žä¾‹the_class<int>
+* ç¼–è¯‘å™¨åœ¨ç¼–è¯‘çš„ç›®æ ‡ä»£ç æ–‡ä»¶,ä¸ºé™æ€æˆå‘˜å˜é‡the_class<int>::idåˆ†é…å†…å­˜åœ°å€ç©ºé—´
 */
 
 void call() {
